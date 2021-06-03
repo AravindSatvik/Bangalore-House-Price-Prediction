@@ -1,0 +1,45 @@
+.formdiv{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    height: 25px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 10px;
+
+}
+input:focus{
+    outline: none;
+}
+.inputdiv{
+    text-align: center;
+}
+select{
+    margin: 10px;
+    border-radius: 50px;
+    height: 30px;
+}
+select:focus{
+    outline: none;
+}
+.submitbtn{
+    border: none;
+    border-radius: 30px;
+    background-color: royalblue;
+    width: 150px;
+    height: 40px;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+}
+.submitbtn:hover{
+    letter-spacing: 1px;
+}
+.submitbtndiv{
+    text-align: center;
+}

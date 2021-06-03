@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Predict the house price - Bangalore</title>
+        <link href="{{url_for('static',filename='styles.css')}}" type="text/css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    </head>
+
+    <body style="overflow: hidden;">
+        <div class="formdiv">
+            <form id="formid" action="." method="post">
+                <div class="inputdiv">
+                    <label for="location">Select the Location</label><br>
+                    <select id="location" name="location">
+                        <option>--Select Location--</option>
+                        {% for i in locdata %}
+                        <option>{{i}}</option>
+                        {% endfor %}
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="inputdiv">
+                    <label for="sqft">Enter the Total Area (in Square Feet)</label> <br>
+                    <input id="sqft" type="text" name="sqft" required/>
+                </div>
+
+                <div class="inputdiv">
+                    <label for="bhk">Enter the Number of Bedrooms</label> <br>
+                    <input id="bhk" type="text" name="bhk" required/>
+                </div>
+
+                <div class="inputdiv">
+                    <label for="bathrooms">Enter the Number of Bathrooms</label> <br>
+                    <input id="bathrooms" type="text" name="bathrooms" required/>
+                </div>
+                <br>
+                <div class="submitbtndiv">
+                    <button type="submit" class="submitbtn">Submit</button>
+                </div>
+                <br>
+                <div>
+                    <strong>{{result_price}}</strong>
+                </div>
+            </form>
+        </div>
+        <script src="{{url_for('static',filename='form.js')}}" type="text/javascript"></script>
+    </body>
+</html>
